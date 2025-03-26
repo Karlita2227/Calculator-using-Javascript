@@ -5,6 +5,8 @@ let operations = {
     "*": (a, b) => a * b,
     "**": (a, b) => a ** b,   
     "%": (a, b) => a % b,
+    "=": (a, b) => a = b,
+    "==": (a, b) => a == b,
 };
 
 function calculate() {
