@@ -1,7 +1,10 @@
 let operations = {
     "+": (a, b) => a + b,
     "-": (a, b) => a - b,
-    "
+    "/": (a, b) => a / b,
+    "*": (a, b) => a * b,
+    "**": (a, b) => a ** b,   
+    "%": (a, b) => a % b,
 };
 
 function calculate() {
@@ -12,18 +15,17 @@ function calculate() {
 	// while converting it to a decimal using parseFloat()
 	let num2 = parseFloat(document.getElementById("num2").value);
 	// stores the mathematical operator we've selected from the dropdown menu
-	let operator = document.getElementById("operator").value;
+	let operator = document.getElementById("operations").value;
 
-	// variable that will represent the result after it's been calculated
+
 	let result;
 
-	// checks if either num1 or num2 is anything other than a numerical value
+	
     if (isNaN(num1) || isNaN(num2)) {
-	// if either ARE anything other than acceptable numerical values
-	// result will be the following string
+	
         result = "Enter a valid number";
     } else {
-	// otherwise, result assign itself to be whatever the two nums evaluate to with the selected operator
+
         result = operations[operator](num1, num2);
     }
 
